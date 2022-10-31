@@ -1,0 +1,65 @@
+@import "styles/screens";
+@import "styles/colors";
+
+
+.main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 170px;
+
+  &__picture {
+    width: 75px;
+
+    > img {
+      width: 100%;
+    }
+  }
+
+  &__number {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 36px;
+    line-height: 44px;
+    color: $primary;
+    background-color: $white;
+    margin-right: 20px;
+    margin-bottom: 16px;
+  }
+
+  > p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
+    width: 220px;
+
+    &__picture {
+      width: 100px;
+    }
+
+    &__number {
+      width: 80px;
+      height: 80px;
+      font-size: 48px;
+      line-height: 59px;
+      margin-bottom: 0;
+    }
+
+    > p {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+}

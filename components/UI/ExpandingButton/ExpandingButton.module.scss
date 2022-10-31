@@ -1,0 +1,47 @@
+@import "styles/colors";
+@import "styles/screens";
+
+
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 60px;
+  background-color: $white;
+  cursor: pointer;
+
+  color: $primary;
+  font-size: 16px;
+  line-height: 19px;
+  box-shadow: 0 -50px 50px 50px $white;
+
+  text-decoration: none;
+
+  &:hover {
+    box-shadow: 0 -50px 50px 50px $white;
+    text-decoration: none;
+    background-color: $white;
+    color: rgba($primary, 0.7);
+  }
+
+  &:active {
+    box-shadow: 0 -50px 50px 50px $white;
+    color: rgba($primary, 0.5);
+  }
+
+  > div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  @media screen and (min-width: $tablet) {
+
+    height: 80px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}

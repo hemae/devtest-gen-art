@@ -1,0 +1,77 @@
+@import "styles/colors";
+@import "styles/screens";
+
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 80px 0 0 0;
+  padding: 100px 0 40px 0!important;
+
+  &.background {
+    background-color: $light-grey-1;
+  }
+
+  > h2 {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  > p {
+    margin-top: 20px;
+
+    > a {
+      color: $primary;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 330px;
+    > * {
+      margin: 20px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    height: 720px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__wrapper {
+      height: 100%;
+      max-width: unset;
+      width: 330px!important;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      @media screen and (min-width: $tablet) {
+        width: 740px!important;
+      }
+
+      @media screen and (min-width: $desktop) {
+        width: 1000px!important;
+      }
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    height: 566px;
+  }
+}

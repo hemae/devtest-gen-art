@@ -1,0 +1,8 @@
+@import "styles/screens";
+
+.main {
+  cursor: move;
+  @media screen and (min-width: $tablet) {
+    overflow: scroll;
+  }
+}

@@ -1,0 +1,18 @@
+@import "../colors";
+
+
+//$subheader-background-mobile: linear-gradient(179.94deg, rgba(0, 0, 0, 0.08) 0.06%, rgba(84, 84, 84, 0) 0.06%, #000000 99.94%);
+//$subheader-background: linear-gradient(269.94deg, rgba(0, 0, 0, 0.08) 0.06%, rgba(84, 84, 84, 0) 0.06%, #000000 99.94%);
+$promo-image-box-shadow: 15px 15px 15px 15px rgba($black, 0.6);
+
+$box-shadow: 0 0 10px rgba($black, 0.1);
+$box-shadow-big: 0 0 20px rgba($black, 0.2);
+
+@mixin non-selectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

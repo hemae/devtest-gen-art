@@ -1,0 +1,43 @@
+
+.main {
+  > div[id="testimonial-header"] {
+    display: flex;
+    align-items: center;
+    margin-bottom: 11px;
+
+    > div:nth-child(1) {
+      margin-right: 14px;
+    }
+  }
+
+  > div[id="testimonial-images"] {
+    display: flex;
+
+    > div {
+      cursor: zoom-in;
+      width: 136px;
+      height: 136px;
+      overflow: hidden;
+      margin-right: 8px;
+      > img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    > div:last-child {
+      margin-right: 0;
+    }
+  }
+
+  > h3 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 11px;
+  }
+
+  > p {
+    margin-bottom: 11px;
+  }
+}

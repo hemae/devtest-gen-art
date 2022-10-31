@@ -1,0 +1,15 @@
+@import "styles/screens";
+
+
+.main {
+
+  > h3, p {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    > h3, p {
+      margin-bottom: 40px;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+export const $white = '#fff'
+export const $black = '#1c1c1c'
+export const $primary = '#008cf0'
+export const $lightGrey = '#d5d5d5'
+export const $grey = '#b0b0b0'
+export const $darkGrey = '#868686'

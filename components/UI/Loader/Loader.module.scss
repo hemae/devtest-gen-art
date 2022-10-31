@@ -1,0 +1,76 @@
+@import "styles/colors";
+
+.main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 56px;
+  height: 56px;
+  animation: main 3.84s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+
+  div {
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    animation: item 0.48s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  }
+
+  div:nth-child(3) {
+    animation-delay: -0.32s;
+  }
+
+  div:nth-child(1) {
+    animation-delay: -0.16s;
+  }
+
+  div:nth-child(2) {
+    animation-delay: 0;
+  }
+
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  12.5% {
+    transform: rotate(45deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  37.5% {
+    transform: rotate(135deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  62.5% {
+    transform: rotate(225deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  87.5% {
+    transform: rotate(315deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes item {
+  0% {
+    transform: scale(1);
+    background: $primary;
+  }
+  50% {
+    transform: scale(0.8);
+    background: $black;
+  }
+  100% {
+    transform: scale(1);
+    background: $white;
+  }
+}

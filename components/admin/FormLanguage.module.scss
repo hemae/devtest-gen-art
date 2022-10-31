@@ -1,0 +1,13 @@
+@import "../../styles/colors";
+
+
+.ownMain {
+
+  border: 1px solid rgba($grey, 0.3);
+
+  > h3 {
+    &.disabled {
+      color: $dark-grey;
+    }
+  }
+}

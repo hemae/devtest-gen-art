@@ -1,0 +1,21 @@
+@import "styles/colors";
+@import "styles/screens";
+
+
+.modal {
+  width: max-content;
+  height: max-content;
+  background: $white;
+  box-shadow: 0px 9px 20px rgba(0, 0, 0, 0.15);
+
+  max-height: 100vh;
+  overflow-y: auto;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}

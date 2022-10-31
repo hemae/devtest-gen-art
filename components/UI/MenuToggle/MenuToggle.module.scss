@@ -1,0 +1,47 @@
+@import "styles/colors";
+
+
+.main {
+  height: 24px;
+  width: 33px;
+  position: relative;
+  cursor: pointer;
+
+  > div {
+    position: absolute;
+    background-color: $toggle-grey;
+    width: 33px;
+    height: 2px;
+    left: 0;
+    transition: all 200ms;
+  }
+
+  > div:nth-child(1) {
+    top: 0;
+  }
+
+  > div:nth-child(2) {
+    top: 11px;
+  }
+
+  > div:nth-child(3) {
+    bottom: 0;
+  }
+
+  &.active {
+    > div:nth-child(1) {
+      top: 11px;
+      transform: rotate(45deg);
+    }
+
+    > div:nth-child(2) {
+      transform: rotate(45deg);
+      opacity: 0;
+    }
+
+    > div:nth-child(3) {
+      bottom: 11px;
+      transform: rotate(-45deg);
+    }
+  }
+}

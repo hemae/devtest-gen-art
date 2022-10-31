@@ -1,0 +1,48 @@
+@import "styles/colors";
+@import "styles/screens";
+
+
+.main {
+  display: flex;
+  justify-content: center;
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__paymentImage {
+    width: 119px;
+    margin-top: 20px;
+
+    > img {
+      width: 100%;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    > span {
+      width: 260px;
+    }
+
+    > div {
+
+      width: 150px;
+
+      > div {
+        background-color: $primary;
+        margin-top: 8px;
+      }
+
+      > input {
+        cursor: default;
+        color: $black;
+        text-align: center;
+      }
+    }
+  }
+}

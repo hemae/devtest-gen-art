@@ -1,0 +1,144 @@
+@import "styles/colors";
+@import "styles/screens";
+@import "styles/UI/index";
+
+
+.main {
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 0!important;
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 20px;
+  }
+
+  &__image {
+    width: calc(250px - 20px);
+    height: max-content;
+    overflow: hidden;
+    background-color: $white;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: $promo-image-box-shadow;
+    transition: opacity 2000ms;
+    opacity: 0;
+
+    > img {
+      width: 100%;
+    }
+
+    &.shown {
+      opacity: 1;
+    }
+  }
+
+  &__text {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    transition: opacity 3000ms;
+    opacity: 0;
+
+    &.shown {
+      opacity: 1;
+    }
+
+    > * {
+      text-align: center;
+      margin-bottom: 20px;
+      max-width: 260px;
+    }
+
+    > *:last-child {
+      margin-bottom: 0;
+    }
+
+    &.dark {
+      color: $black;
+    }
+
+    &.light {
+      color: $white;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+
+    padding: 90px 0!important;
+
+    &__container {
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0 60px;
+    }
+
+    &__image {
+      width: calc(380px - 30px);
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    &__text {
+      margin-top: 0;
+      align-items: flex-start;
+      height: 380px;
+      margin-left: 40px;
+
+      > * {
+        text-align: left;
+        transform: scale(0.7);
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  @media screen and (min-width: $tablet + 100px) {
+
+    &__text {
+      margin-top: 0;
+      align-items: flex-start;
+      height: 420px;
+      margin-left: 80px;
+
+      > * {
+        transform: scale(1);
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+
+    &__container {
+      margin: 0 80px;
+    }
+
+    &__image {
+      width: calc(420px - 40px);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    &__text {
+      margin-left: 200px;
+
+      > * {
+        max-width: 500px;
+      }
+    }
+  }
+}

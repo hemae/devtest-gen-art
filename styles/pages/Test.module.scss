@@ -1,0 +1,29 @@
+@import "styles/screens";
+
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    width: 296px;
+    height: 196px;
+    background-color: rgba(green, 0.3);
+    border: 2px solid crimson;
+  }
+
+  @media screen and (min-width: $tablet) {
+    &__element {
+      width: 596px;
+      height: 396px;
+      background-color: rgba(yellow, 0.3);
+    }
+  }
+}

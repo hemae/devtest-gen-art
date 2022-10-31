@@ -1,0 +1,64 @@
+@import "styles/screens";
+@import "styles/colors";
+
+
+.main {
+  position: fixed;
+  left: calc(-100vw + 30px);
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  background-color: rgba($light-grey-1, 0.5);
+  padding: 20px 0;
+  transition: all 200ms;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &.active {
+    left: 0;
+    background-color: $light-grey-1;
+  }
+
+  &.nonTouchable {
+
+    > div {
+      padding-left: 40px;
+    }
+
+    &.active {
+      left: -30px;
+    }
+  }
+
+  > button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    > button {
+      display: none;
+    }
+    width: 400px;
+    left: 0;
+    &.nonTouchable {
+
+      > div {
+        padding-left: 0;
+      }
+
+      &.active {
+        left: 0;
+        background-color: rgba($light-grey-1, 0.5);
+      }
+    }
+  }
+}

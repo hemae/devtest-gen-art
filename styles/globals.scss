@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import "UI/button";
+@import "UI/input";
+@import "UI/select";
+@import "styles/screens";
+
+
+.not-scrollable {
+  overflow: hidden;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  > div {
+    width: 100vw;
+    min-height: 100vh;
+  }
+}
+
+
+a {
+  display: inline-block;
+}
+
+p {
+  white-space: pre-wrap;
+}
+
+h1,
+h2,
+h3,
+span,
+div {
+  margin: 0;
+}
+* {
+  font-family: 'Montserrat';
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+a,
+button,
+input,
+textarea,
+div {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+img {
+  vertical-align: top;
+  display: block;
+}
+
+p,
+span,
+section,
+aside,
+header,
+footer,
+main {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  cursor: default;
+}
+
+h1 {
+  font-size: 25px;
+  line-height: 30px;
+}
+h2 {
+  font-size: 25px;
+  line-height: 30px;
+}
+h3 {
+  font-size: 12px;
+  line-height: 15px;
+}
+
+@media screen and (min-width: $tablet) {
+  h1 {
+    font-size: 48px;
+    line-height: 57px;
+  }
+  h2 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  h3 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  a,
+  button,
+  input,
+  textarea,
+  div {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  p,
+  span,
+  section,
+  aside,
+  header,
+  footer,
+  main {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+code {
+  font-family: 'Montserrat', sans-serif;
+}
+
+* {
+  margin: 0;
+}
+
+select {
+  @include select;
+}
+
+button {
+  @include button;
+}
+
+input {
+  @include input;
+}
+
+textarea {
+  @include input;
+}

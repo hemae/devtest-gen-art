@@ -1,0 +1,72 @@
+@import "styles/UI/index";
+@import "styles/screens";
+@import "components/UI/Uploader/uploaderConstants.scss";
+
+
+.main {
+  width: $drop-zone-size;
+  height: $drop-zone-size;
+  border-radius: 50%;
+  border: $drop-zone-border dashed $grey;
+  box-shadow: $box-shadow-big;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 100ms;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  color: $grey;
+  cursor: pointer;
+
+  > svg {
+    font-size: 120px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    transition: color 100ms;
+    @media screen and (min-width: $tablet) {
+      margin-top: 30px;
+    }
+  }
+
+  &:active {
+    border: $drop-zone-border dotted $primary;
+    color: $primary;
+    box-shadow: none;
+    transform: scale(0.995);
+  }
+
+  &.active {
+    border: $drop-zone-border dotted $primary;
+    color: $primary;
+    box-shadow: none;
+    transform: scale(0.995);
+  }
+
+  > span {
+    transition: color 100ms;
+    text-align: center;
+    &.desktop {
+      display: none;
+      font-size: 26px;
+      width: 200px;
+      @media screen and (min-width: $tablet) {
+        display: initial;
+      }
+    }
+
+    &.tablet {
+      font-size: 30px;
+      @media screen and (min-width: $tablet) {
+        display: none;
+      }
+    }
+  }
+}

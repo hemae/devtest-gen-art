@@ -1,0 +1,189 @@
+@import "styles/colors";
+@import "styles/screens";
+
+
+.main {
+
+  padding: 100px 0 0 0!important;
+
+  > h2 {
+    position: relative;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 330px;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+
+        > button {
+          margin-bottom: 20px;
+        }
+
+        > * {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &__divider {
+    margin-top: 10px;
+    height: 2px;
+    width: 98%;
+    background-color: $primary;
+    border-radius: 50%;
+  }
+
+  > aside {
+    display: none;
+  }
+
+  @media screen and (max-width: $tablet) {
+    background: none!important;
+  }
+
+  @media screen and (min-width: $tablet) {
+
+    margin-top: 120px!important;
+    padding: 30px 0!important;
+    position: relative;
+
+    &__divider {
+      display: none;
+    }
+
+    width: 100%;
+    box-shadow: inset 0 0 20px 0 rgba($white, 1);
+
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__wrapper {
+      height: 100%;
+      max-width: unset;
+      width: 330px!important;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      > * {
+        width: max-content;
+        max-width: 33%;
+        height: calc(100% - 60px);
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+
+        &.top {
+          justify-content: flex-start;
+        }
+
+        &.center {
+          justify-content: center;
+        }
+
+        &.bottom {
+          justify-content: flex-end;
+        }
+
+        > div {
+          width: 100%;
+          > button {
+            padding: 18px 24px;
+            width: 100%;
+            margin-bottom: 22px;
+          }
+
+          > div {
+            > div[id="pale"] {
+              display: none;
+            }
+            > p {
+              text-align: center;
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+
+      @media screen and (min-width: $tablet) {
+        width: 740px!important;
+
+        > * > div {
+
+          > div {
+
+            position: relative;
+
+            > div[id="pale"] {
+              display: flex;
+              position: absolute;
+              top: 60%;
+              left: 0;
+              right: 0;
+              height: 0.2px;
+              background-color: rgba($white, 0.6);
+              border-radius: 200px;
+
+              box-shadow: 0 0 50px 24px rgba($white, 1);
+            }
+
+            > p {
+              position: relative;
+            }
+          }
+        }
+      }
+
+      @media screen and (min-width: $desktop) {
+        width: 1200px!important;
+      }
+    }
+
+    > aside {
+      display: flex;
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: $white;
+      box-shadow: 0 0 70px 80px rgba($white, 1);
+
+      &.top {
+        top: 0;
+      }
+
+      &.bottom {
+        bottom: 0;
+      }
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    height: 880px;
+    box-shadow: inset 0 0 50px 0 rgba($white, 1);
+
+    > aside {
+      box-shadow: 0 0 70px 60px rgba($white, 1);
+    }
+  }
+}

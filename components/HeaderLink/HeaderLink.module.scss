@@ -1,0 +1,14 @@
+@import "styles/screens";
+
+
+.main {
+
+  padding: 3px;
+  cursor: pointer;
+  text-decoration: none;
+  width: max-content;
+
+  @media screen and (min-width: $tablet){
+    padding: 5px;
+  }
+}

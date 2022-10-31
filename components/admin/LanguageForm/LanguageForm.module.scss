@@ -1,0 +1,33 @@
+@import "styles/colors";
+@import "styles/screens";
+
+
+.main {
+  padding: 40px 20px 20px 20px;
+  background-color: rgba($light-grey-1, 0.5);
+  transition: background-color 200ms;
+  position: relative;
+
+  > button[id="delete-language"] {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+  }
+
+  display: flex;
+  flex-direction: column;
+
+  > * {
+    margin: 10px 0;
+  }
+
+  &:hover {
+    background-color: rgba($light-grey-1, 0.7);
+  }
+}

@@ -1,0 +1,75 @@
+@import "styles/colors";
+@import "styles/screens";
+@import "styles/UI";
+
+
+.main {
+
+  position: relative;
+  width: 300px;
+  height: auto;
+  @include non-selectable;
+
+  @media screen and (min-width: $tablet) {
+    width: 500px;
+  }
+
+  &__1 {
+    width: 100%;
+    > img {
+      width: 100%;
+    }
+  }
+
+  &__2 {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    > img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &__divider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: rgba($primary, 0.5);
+
+    > div {
+      position: absolute;
+      border-radius: 50%;
+      background-color: $primary;
+      box-shadow: 0 0 2px rgba($black, 0.4);
+      transition: all 200ms;
+      color: rgba($white, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.active {
+        box-shadow: none;
+        color: rgba($white, 1);
+      }
+    }
+  }
+
+  &__moveLayer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+}

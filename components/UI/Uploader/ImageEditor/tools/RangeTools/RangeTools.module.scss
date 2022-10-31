@@ -1,0 +1,5 @@
+.main {
+  > :not(:nth-child(5)) {
+    margin-bottom: 10px;
+  }
+}

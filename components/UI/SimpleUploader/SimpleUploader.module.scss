@@ -1,0 +1,31 @@
+@import "styles/colors";
+
+
+.main {
+  padding: 20px 0;
+  border-radius: 6px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__buttonsContainer {
+    padding: 0 30px;
+    > input[id="uploader-input"] {display: none}
+    > * {
+      margin-right: 10px;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    transition: all 200ms;
+
+    &:hover {
+      transform: scale(0.9);
+    }
+
+    &:active {
+      transform: scale(0.7);
+    }
+  }
+}

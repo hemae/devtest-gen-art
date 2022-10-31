@@ -1,0 +1,55 @@
+@import "styles/colors";
+@import "styles/screens";
+
+
+.background {
+
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  background: rgba($black, 0.7);
+  transition: all 200ms;
+
+  &.mounted {
+    opacity: 1;
+  }
+}
+
+.popUpWrapper {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: -2000px;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 150ms;
+  overflow-y: auto;
+
+  &.mounted {
+    right: 0;
+    opacity: 1;
+  }
+
+  > section {
+    position: relative;
+    > div[id="popup-close"] {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    > section > div[id="popup-close"] {
+      top: 30px;
+      right: 30px;
+    }
+  }
+}

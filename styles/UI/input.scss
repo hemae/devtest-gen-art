@@ -1,0 +1,22 @@
+@import "styles/colors";
+
+
+@mixin input {
+  background: none;
+  border: none;
+  color: $black;
+  padding: 5px 14px;
+  letter-spacing: 0.09em;
+  outline: none;
+  resize: none;
+
+  transition: all 200ms;
+
+  &::placeholder {
+    color: $grey;
+  }
+
+  &:disabled {
+    color: $light-grey;
+  }
+}

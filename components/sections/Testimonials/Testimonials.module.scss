@@ -1,0 +1,54 @@
+@import "styles/screens";
+
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  > div[id="leave-testimonial"] {
+    align-self: center;
+    margin-top: 20px;
+  }
+
+  &.expandingButtonHidden {
+    > button[id="testimonials-show-more-button"] {
+      display: none;
+    }
+  }
+
+  &__itemsWrapper {
+    > * {
+      margin: 50px 0;
+    }
+  }
+
+  > *:not(div[id="leave-testimonial"]) {
+    width: 330px!important;
+    align-self: center;
+  }
+
+  > h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: $tablet) {
+
+    > *:not(div[id="leave-testimonial"]) {
+      width: 740px!important;
+    }
+
+    > h2 {
+      margin-bottom: 40px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+
+    > *:not(div[id="leave-testimonial"]) {
+      width: 1000px!important;
+    }
+  }
+}

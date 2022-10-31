@@ -1,0 +1,40 @@
+@import "styles/colors";
+@import "styles/screens";
+
+
+.main {
+
+  position: fixed;
+  right: 10px;
+  top: -30px;
+  opacity: 1;
+  transition: top 150ms, opacity 1s;
+  z-index: 4;
+
+  background-color: $primary;
+  color: $black;
+
+  &.error {
+    background-color: $danger;
+    color: $white;
+  }
+
+  padding: 10px;
+  border-radius: 6px;
+
+  &.active {
+    top: 10px;
+  }
+
+  &.hidden {
+    opacity: 0;
+  }
+
+  @media screen and (min-width: $tablet) {
+    right: 20px;
+
+    &.active {
+      top: 30px;
+    }
+  }
+}

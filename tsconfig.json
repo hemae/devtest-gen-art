@@ -1,0 +1,129 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@API/*": [
+        "API/*"
+      ],
+      "@entityAPI": [
+        "API/entityAPI/index"
+      ],
+      "@basePaths": [
+        "API/basePaths"
+      ],
+      "@apiModels/*": [
+        "apiModels/*"
+      ],
+      "@appComponents": [
+        "appComponents/index"
+      ],
+      "@appRoutes": [
+        "appRoutes/index"
+      ],
+      "@AxiosAPI": [
+        "AxiosAPI/index"
+      ],
+      "@qs": [
+        "AxiosAPI/queryCreator/index"
+      ],
+      "@components/*": [
+        "components/*"
+      ],
+      "@components": [
+        "components/index"
+      ],
+      "@admin": [
+        "components/admin/index"
+      ],
+      "@admin/*": [
+        "components/admin/*"
+      ],
+      "@adminData/*": [
+        "adminData/*"
+      ],
+      "@contentComponents": [
+        "components/admin/contentComponents/index"
+      ],
+      "@UI": [
+        "components/UI/index"
+      ],
+      "@UI/*": [
+        "components/UI/*"
+      ],
+      "@dataHandlers/*": [
+        "dataHandlers/*"
+      ],
+      "@helpers/*": [
+        "helpers/*"
+      ],
+      "@hooks/*": [
+        "hooks/*"
+      ],
+      "@exoticHooks/*": [
+        "exoticHooks/*"
+      ],
+      "@layouts/*": [
+        "layouts/*"
+      ],
+      "@pageHooks/*": [
+        "pageHooks/*"
+      ],
+      "@requestHandlers/*": [
+        "requestHandlers/*"
+      ],
+      "@robokassa": [
+        "robokassa/index"
+      ],
+      "@serverHandlers": [
+        "serverHandlers"
+      ],
+      "@serverSideProps/*": [
+        "serverSideProps/*"
+      ],
+      "@store": [
+        "store/index"
+      ],
+      "@appHooks": [
+        "store/appHooks/index"
+      ],
+      "@slices/*": [
+        "store/slices/*"
+      ],
+      "@commonModels": [
+        "store/commonModels"
+      ],
+      "@styles/*": [
+        "styles/*"
+      ],
+      "@sections": [
+        "components/sections/index"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

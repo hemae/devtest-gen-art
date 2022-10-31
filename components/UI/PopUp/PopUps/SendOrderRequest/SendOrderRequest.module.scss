@@ -1,0 +1,99 @@
+@import "styles/screens";
+@import "styles/colors";
+
+
+.main {
+  width: calc(100vw - 40px);
+  padding: 40px 20px;
+
+  > h2 {
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding: 40px 60px;
+    width: calc(904px - 120px);
+    max-width: 95vw;
+
+    > h2 {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__inputsWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    > div {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 24px;
+
+      > span {
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+    }
+
+    > div[id="policy"] {
+      a {
+        color: $primary;
+      }
+    }
+
+    > div[id="testimonial"],
+    > div[id="uploader"],
+    > div[id="submit-button"],
+    > div[id="policy"] {
+      width: 100%;
+    }
+
+    > div[id="submit-button"] {
+      margin-bottom: 0;
+    }
+
+    > div[id="policy"] {
+
+      a {
+        color: $primary;
+      }
+
+      p, span {
+        color: $black;
+        font-size: 16px;
+        line-height: 20px;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    @media screen and (min-width: $tablet) {
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+
+      > div {
+        width: 45%;
+        margin-bottom: 40px;
+      }
+
+      > div[id="submit-button"],
+      > div[id="policy"] {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        > button {
+          width: 430px;
+          height: 56px;
+        }
+      }
+    }
+  }
+}

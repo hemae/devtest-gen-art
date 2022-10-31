@@ -1,0 +1,57 @@
+@import "styles/UI/index";
+@import "components/UI/Uploader/uploaderConstants";
+
+
+.main {
+
+  > :nth-child(1) {
+    margin-bottom: 20px;
+  }
+
+  &__container {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: $image-size;
+    height: $image-size;
+    background-repeat: no-repeat;
+    background-size: $image-size;
+    background-position: 0 0;
+    box-shadow: $box-shadow-big;
+
+    > * {
+      position: absolute;
+      //top: 0;
+      //left: 0;
+      //bottom: 0;
+      //right: 0;
+      //background-repeat: no-repeat;
+    }
+
+    > *:not(:nth-child(1)) {
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    > :nth-child(2) {
+      width: 100%;
+      height: 100%;
+      opacity: 0.6;
+    }
+
+    > :nth-child(3) {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 250ms;
+    }
+
+    &.rotation {
+      > :nth-child(3) {
+        opacity: 0.4;
+      }
+    }
+  }
+}

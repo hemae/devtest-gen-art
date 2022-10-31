@@ -1,0 +1,90 @@
+@import "styles/colors";
+@import "styles/screens";
+
+
+.main {
+
+  &__header {
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    > div > svg {
+      fill: $grey;
+      transition: all 200ms;
+      transform: rotate(0) scale(0.6);
+      margin-right: 54px;
+
+      &.active {
+        transform: rotate(90deg) scale(0.6);
+      }
+
+      @media screen and (min-width: $tablet) {
+        transform: rotate(0) scale(1);
+        margin-right: 54px;
+
+        &.active {
+          transform: rotate(90deg) scale(1);
+        }
+      }
+    }
+  }
+
+  &__body {
+    height: 20px;
+    transition: height 200ms;
+
+    a {
+      color: $primary;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    > div {
+      margin-top: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      > div {
+        width: 200px;
+
+        > img {
+          width: 100%;
+        }
+      }
+    }
+
+    > * {
+      opacity: 0;
+      transition: opacity 200ms;
+    }
+
+    &.hidden {
+      height: 1px;
+      > * {
+        display: none;
+      }
+    }
+
+    &.active {
+      height: max-content;
+      padding: 10px;
+      > * {
+        opacity: 1;
+      }
+    }
+
+    @media screen and (min-width: $tablet) {
+      > div {
+        margin-top: 30px;
+
+        > div {
+          width: 400px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import "styles/colors";
+
+
+
+.main {
+  display: flex;
+
+  > div {
+
+    &.interactive {
+      cursor: pointer;
+    }
+
+    margin-right: 7px;
+
+    > svg {
+      fill: $grey;
+    }
+
+    &.fill {
+      > svg {
+        fill: $primary;
+      }
+    }
+  }
+
+  > div:last-child {
+    margin-right: 0;
+  }
+}

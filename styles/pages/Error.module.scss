@@ -1,0 +1,44 @@
+@import "styles/colors";
+@import "styles/screens";
+
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  > * {
+    margin-bottom: 30px;
+  }
+
+  > p {
+    a {
+      color: $primary;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+
+  > div {
+    width: 300px;
+
+    > img {
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    > div {
+      width: 400px;
+    }
+  }
+}

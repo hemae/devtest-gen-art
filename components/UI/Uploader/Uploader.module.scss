@@ -1,0 +1,15 @@
+@import "styles/screens";
+
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &.isImage {
+    > :nth-child(2) {
+      display: none;
+    }
+  }
+}

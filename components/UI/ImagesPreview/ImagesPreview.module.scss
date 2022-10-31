@@ -1,0 +1,37 @@
+
+.main {
+
+  display: flex;
+
+  > div {
+    margin-right: 5px;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 2px;
+    position: relative;
+
+    > button {
+      position: absolute;
+      padding: 0;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      top: 0;
+      right: 0;
+      opacity: 0.5;
+    }
+
+    > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  > div:last-child {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,33 @@
+@import "styles/colors";
+@import "styles/screens";
+
+
+.main {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 130px 0;
+
+  > *:not(h1) {
+    width: 300px;
+    margin: 20px 0!important;
+    padding: 0!important;
+  }
+
+  > h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    > *:not(h1) {
+      width: 770px;
+      margin: 30px 0!important;
+    }
+    > h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+}

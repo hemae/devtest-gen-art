@@ -1,0 +1,54 @@
+@import "styles/screens";
+@import "styles/colors";
+
+
+.main {
+  width: 314px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    > div[id="leave-testimonial-image"] > img {
+      margin-bottom: 18px;
+    }
+  }
+
+  > div[id="leave-testimonial-image"] {
+    height: 168px;
+    margin-bottom: -18px;
+    border-radius: 160px 160px 0 0;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+
+    > img {
+      width: 95%;
+      height: auto;
+      transition: all 400ms;
+    }
+  }
+
+  > button {
+    width: 100%;
+    height: 30px;
+    &:hover {
+      background-color: $primary;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    > div[id="leave-testimonial-image"] {
+      height: 233px;
+      border-radius: 230px 230px 0 0;
+    }
+
+    > button {
+      height: 50px;
+    }
+    width: 452px;
+  }
+}

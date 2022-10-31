@@ -1,0 +1,84 @@
+@import "styles/screens";
+
+
+.main {
+  width: 330px!important;
+  display: flex;
+  flex-direction: column-reverse;
+  min-height: 250px;
+
+  &__imagesWrapper {
+    position: relative;
+    height: 180px;
+
+    > div:nth-child(2) {
+      left: 0;
+    }
+
+    > div:nth-child(1) {
+      right: 0;
+    }
+
+    > div {
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      overflow: hidden;
+      border-radius: 50%;
+
+      > img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    @media screen and (min-width: $tablet) {
+      flex: 1.2;
+      height: 350px;
+
+      > div {
+        width: 350px;
+        height: 350px;
+      }
+    }
+  }
+
+  &__textWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 50px;
+
+    > h2, p {
+      text-align: center;
+    }
+
+    > h2 {
+      margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      flex: 0.8;
+      margin-top: 0;
+      margin-right: 20px;
+      padding: 40px 0;
+
+      > h2, p {
+        text-align: left;
+      }
+
+      > h2 {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 740px!important;
+    flex-direction: row;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 1000px!important;
+  }
+}

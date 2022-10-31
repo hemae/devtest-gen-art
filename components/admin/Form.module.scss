@@ -1,0 +1,38 @@
+@import "styles/colors";
+@import "styles/screens";
+
+
+.main {
+  padding: 40px 20px 20px 20px;
+  background-color: rgba($light-grey-1, 0.5);
+  transition: background-color 200ms;
+  position: relative;
+
+  &__mainPreview {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+
+    > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  > button[id="delete"] {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  display: flex;
+  flex-direction: column;
+
+  > * {
+    margin: 10px 0;
+  }
+
+  &:hover {
+    background-color: rgba($light-grey-1, 0.7);
+  }
+}

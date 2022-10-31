@@ -1,0 +1,77 @@
+@import "styles/colors";
+
+.main {
+
+  overflow: hidden;
+  width: max-content;
+  height: max-content;
+  min-height: 100px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid $grey;
+  border-radius: 6px;
+
+  &:hover {
+    border-color: $primary;
+  }
+
+  > img {
+    width: 100px;
+    height: auto;
+  }
+
+  &.isRemoving {
+    transform: scale(0);
+    transition: transform 200ms;
+  }
+
+  > *:not(img) {
+    opacity: 0;
+    transition: all 200ms;
+    position: absolute;
+  }
+
+  &__delete {
+    width: 20px;
+    height: 20px;
+    border-radius: 0 0 0 4px;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    color: $primary;
+    background-color: rgba($white, 0.3);
+
+    &:hover {
+      color: rgba($primary, 0.7);
+    }
+  }
+
+  &__imageInfo {
+    padding: 0 2px;
+    height: 26px;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: $black;
+    background-color: $white;
+    cursor: default;
+  }
+
+  &:hover {
+    .main__delete {
+      opacity: 0.9;
+    }
+    .main__imageInfo {
+      opacity: 0.9;
+    }
+  }
+}

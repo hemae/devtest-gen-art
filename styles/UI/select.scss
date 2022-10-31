@@ -1,0 +1,33 @@
+@import "styles/colors";
+
+
+@mixin select {
+  background: none;
+  border: none;
+  color: $black;
+  border-bottom: 2px solid $grey;
+  border-radius: 2px;
+  padding: 5px 14px;
+  letter-spacing: 0.09em;
+  outline: none;
+  resize: none;
+
+  transition: all 200ms;
+
+  &.placeholder {
+    color: $grey;
+  }
+
+  &:focus {
+    border-color: $primary;
+  }
+
+  &::placeholder {
+    color: $light-grey;
+  }
+
+  &:disabled {
+    border-color: $light-grey;
+    color: $light-grey;
+  }
+}

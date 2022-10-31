@@ -1,0 +1,66 @@
+{
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    //    "eslint:recommended",
+    //    "plugin:react/recommended",
+    //    "plugin:@typescript-eslint/eslint-recommended",
+    //    "plugin:@typescript-eslint/recommended",
+    //    "prettier",
+    //    "eslint-config-prettier"
+  ],
+  "env": {
+    "commonjs": true,
+    "es6": true,
+    "node": true,
+    "browser": false
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": false
+    },
+    "babelOptions": {
+      "presets": ["@babel/preset-react"]
+    },
+    "sourceType": "module",
+    "requireConfigFile": false
+  },
+  "globals": {
+    "document": true,
+    "window": true,
+    "localStorage": true,
+    "FormData": true
+  },
+  "rules": {
+    //    "linebreak-style": ["warn", "unix"],
+    //    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    //    "quotes": ["warn", "single"],
+    //    "semi": ["error", "never"],
+    //    "no-unused-vars": ["error"],
+    //    "eqeqeq": ["warn", "always", { "null": "ignore" }],
+    //    "react/jsx-filename-extension": [
+    //      1,
+    //      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    //    ],
+    //    "react/react-in-jsx-scope": 0,
+    //    "react/prop-types": 0,
+    //    "@typescript-eslint/no-empty-function": [
+    //      "error",
+    //      { "allow": ["arrowFunctions"] }
+    //    ]
+  },
+  "ignorePatterns": [
+    "**/*.d.ts",
+    ".cache/*",
+    ".next/*",
+    "build/*",
+    "/node_modules/"
+  ]
+}
+

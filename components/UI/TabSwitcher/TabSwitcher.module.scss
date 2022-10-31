@@ -1,0 +1,62 @@
+@import "styles/colors";
+
+
+$switch-size: 20px;
+$triangle-size-coef: 1.5;
+
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.none {
+    display: none;
+  }
+
+  > div {
+    background-color: $white;
+    cursor: pointer;
+    margin-right: 16px;
+    transition: all 150ms;
+
+    &:hover {
+      transform: scale(0.9);
+    }
+
+    &.active {
+      opacity: 0.7;
+      transform: scale(0.9);
+    }
+
+    &:active {
+      opacity: 0.7;
+      transform: scale(0.7);
+    }
+  }
+
+  &__switchItem {
+    height: $switch-size;
+    width: $switch-size;
+    border-radius: 50%;
+  }
+
+  &__switcher {
+    background: none!important;
+    width: 0;
+    height: 0;
+    border-top: $switch-size * $triangle-size-coef / 2 solid transparent;
+    border-bottom: $switch-size * $triangle-size-coef / 2 solid transparent;
+
+    &.right {
+      border-left: $switch-size * $triangle-size-coef solid $white;
+    }
+
+    &.left {
+      border-right: $switch-size * $triangle-size-coef solid $white;
+    }
+  }
+
+  > div:last-child {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,44 @@
+@import "styles/screens";
+@import "styles/colors";
+
+
+.main {
+  cursor: zoom-out;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba($black, 0.7);
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 200ms;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.shown {
+    opacity: 1;
+  }
+
+  > div[id="fullscreen-image"] {
+    width: 400px;
+    max-height: calc(100vh - 10px);
+    max-width: calc(100vw - 10px);
+    overflow: hidden;
+    > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    > div[id="fullscreen-image"] {
+      max-height: calc(100vh - 20px);
+      max-width: calc(100vw - 20px);
+      width: 500px;
+      //height: 500px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import "../../screens";
+@import "../mixins/content";
+
+
+.main {
+  display: flex;
+  > section {
+    padding-left: 40px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    > section {
+      padding-left: 20px;
+      margin-left: 400px;
+    }
+  }
+}

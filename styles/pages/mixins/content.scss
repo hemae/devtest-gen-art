@@ -1,0 +1,12 @@
+@import "../../colors";
+@import "styles/screens";
+
+
+@mixin content {
+  width: calc(100% - 20px);
+  margin: 10px;
+  @media screen and (min-width: $tablet) {
+    width: calc(100% - 80px);
+    margin: 40px;
+  }
+}

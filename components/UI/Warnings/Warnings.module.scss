@@ -1,0 +1,37 @@
+@import "styles/colors";
+
+
+.warningsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.warnings {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1.5s;
+  cursor: default;
+  padding: 8px;
+  > span {
+    text-align: center;
+    width: 100%;
+  }
+
+  &.active {
+    opacity: 1;
+  }
+  &.error {
+    span {
+      color: $danger;
+    }
+  }
+  &.notice {
+    span {
+      color: $notice;
+    }
+  }
+}

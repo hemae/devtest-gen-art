@@ -1,0 +1,87 @@
+@import "styles/screens";
+
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &.expandingButtonHidden {
+    > button[id="gallery-show-more-button"] {
+      display: none;
+    }
+  }
+
+  > * {
+    width: 330px!important;
+    align-self: center;
+  }
+
+  > h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__itemsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    > * {
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+    > *:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+
+    > * {
+      width: 740px!important;
+    }
+
+    > h2 {
+      margin-bottom: 40px;
+    }
+
+    &__itemsWrapper {
+      > * {
+        margin-right: 0;
+        margin-bottom: 40px;
+      }
+      > *:nth-child(2n) {
+        margin-right: 40px;
+      }
+      > * {
+        margin-right: 40px;
+      }
+      > *:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+
+    > * {
+      width: 1000px!important;
+    }
+
+    &__itemsWrapper {
+      width: 1000px;
+      > * {
+        margin-right: 0;
+      }
+      > *:nth-child(3n) {
+        margin-right: 40px;
+      }
+      > * {
+        margin-right: 40px;
+      }
+      > *:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
+  }
+}

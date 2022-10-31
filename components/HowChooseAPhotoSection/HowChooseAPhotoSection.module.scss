@@ -1,0 +1,69 @@
+@import "styles/screens";
+
+
+.main {
+
+  > h3 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &__imagesWrapper {
+    display: flex;
+    flex-direction: column;
+
+    > div:last-child {
+      margin-top: 30px;
+    }
+
+    > div {
+      width: 100%;
+      position: relative;
+
+      > img {
+        width: 100%;
+        height: auto;
+      }
+
+      > div {
+        position: absolute;
+        bottom: -30px;
+        right: -30px;
+
+        > svg {
+          transform: scale(0.6);
+        }
+      }
+    }
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    > h3 {
+      margin-bottom: 60px;
+    }
+
+    &__imagesWrapper {
+      flex-direction: row;
+      justify-content: space-between;
+
+      > div:last-child {
+        margin-top: 0;
+      }
+
+      > div {
+        width: 384px;
+
+        > div {
+          bottom: -40px;
+          right: -40px;
+
+          > svg {
+            transform: scale(0.7);
+          }
+        }
+      }
+      margin-bottom: 100px;
+    }
+  }
+}

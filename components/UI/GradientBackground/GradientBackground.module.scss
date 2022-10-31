@@ -1,0 +1,24 @@
+@import "styles/colors";
+@import "styles/screens";
+
+
+.main {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  &.desktop {
+    display: none;
+    @media screen and (min-width: $tablet) {
+      display: flex;
+    }
+  }
+
+  &.mobile {
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
+  }
+}

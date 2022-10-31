@@ -1,0 +1,19 @@
+@import "styles/colors";
+@import "styles/screens";
+
+
+.main {
+  width: 100%;
+
+  > div {
+    margin-top: 20px;
+    background-color: $grey;
+    transition: background-color 200ms;
+  }
+
+  &.active {
+    > div {
+      background-color: $primary;
+    }
+  }
+}
